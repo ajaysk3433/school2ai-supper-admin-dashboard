@@ -1,20 +1,28 @@
-// import useHandleInput from "./handleInput";
-const Login = () => {
-  // const [inputValue, setUserInput] = useHandleInput();
+import useeInputHandler from "../../../hook/input.handler";
+import { loginRequest } from "./loginAPI";
+const LoginPage = () => {
+  const [inputValue, setUserInput] = useeInputHandler();
+  const onSubmitHandler = (e) => {
+    e.preventDefault();
+    loginRequest(inputValue);
+  };
   return (
     <>
       <div className="flex justify-center items-center h-screen">
         <div className="bg-background">
-          <form className="flex flex-col p-6">
+          <form className="flex flex-col p-6" onSubmit={onSubmitHandler}>
             <label htmlFor="email">Email</label>
             <input
-              // onChange={setUserInput}
+              onChange={setUserInput}
+              value={inputValue.email}
               type="email"
               name="email"
               className="outline-solid outline-2 outline-border rounded-sm mb-5 "
             />
             <label htmlFor="password">Password</label>
             <input
+              onChange={setUserInput}
+              value={inputValue.password}
               type="password"
               name="password"
               className="outline-solid outline-2 outline-border rounded-sm mb-5 "
@@ -32,4 +40,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginPage;
