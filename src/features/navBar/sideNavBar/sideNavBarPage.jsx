@@ -13,6 +13,7 @@ const SideNavBar = () => {
       {/* Navigation */}
       <nav className="mt-4 px-3 space-y-1">
         <NavItem to="/dashboard" icon={<IoHomeOutline />} label="Dashboard" />
+        <NavItem to="/school" icon={<IoSchoolOutline />} label="School" />
         <NavItem
           to="/school-onboarding"
           icon={<IoSchoolOutline />}
