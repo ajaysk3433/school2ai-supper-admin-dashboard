@@ -3,7 +3,7 @@
 @theme {
   --color-primary: #7952f1;
   --color-secondary: #cc50bd;
-  --color-background: #fff;
+  --color-background: #fff; /* white */
   --color-body: #e5e5e5;
   --color-border: #e5e5e5;
   --color-white-text: #fff;
