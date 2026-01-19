@@ -6,7 +6,8 @@ const inputHandler = (schemaObj) => {
     const name = e.target.name;
     const value = e.target.value;
     setInputValue({ ...inputValue, [name]: value });
-    console.log(inputValue);
+    console.log("name :", name);
+    console.log("value :", value);
   };
   return [inputValue, setUserInput];
 };

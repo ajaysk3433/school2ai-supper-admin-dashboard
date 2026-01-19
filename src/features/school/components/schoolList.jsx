@@ -1,9 +1,4 @@
-// const schools = [
-//   { id: 1, name: "Green Valley High School", status: "Active" },
-//   { id: 2, name: "Sunrise Public School", status: "Inactive" },
-//   { id: 3, name: "Riverdale Academy", status: "Active" },
-// ];
-
+import { useNavigate } from "react-router";
 const SchoolList = ({ schools }) => {
   return (
     <div className="p-6">
@@ -33,13 +28,17 @@ const SchoolList = ({ schools }) => {
 export default SchoolList;
 
 const SchoolItem = ({ school }) => {
+  const navigate = useNavigate();
   return (
     <tr className="hover:bg-slate-50 ">
       <td className="border-b border-slate-300 px-4 py-4 text-center">
         {school.school_id}
       </td>
 
-      <td className="border-b border-slate-300 px-4 py-4">
+      <td
+        onClick={() => navigate(`/school/view/${school.school_id}`)}
+        className="border-b border-slate-300 px-4 py-4"
+      >
         {school.school_name}
       </td>
 
