@@ -10,6 +10,12 @@ const SchoolList = ({ schools }) => {
               School
             </th>
             <th className="border border-slate-300 px-4 py-2 text-left">
+              State
+            </th>
+            <th className="border border-slate-300 px-4 py-2 text-left">
+              Cost
+            </th>
+            <th className="border border-slate-300 px-4 py-2 text-left">
               Status
             </th>
           </tr>
@@ -37,9 +43,17 @@ const SchoolItem = ({ school }) => {
 
       <td
         onClick={() => navigate(`/school/view/${school.school_id}`)}
-        className="border-b border-slate-300 px-4 py-4"
+        className="border-b border-slate-300 px-4 py-4 underline cursor-pointer"
       >
         {school.school_name}
+      </td>
+
+      <td className="border-b border-slate-300 px-4 py-4 text-center">
+        {school.state}
+      </td>
+
+      <td className="border-b border-slate-300 px-4 py-4 text-center">
+        {school.cost}
       </td>
 
       <td className="border-b border-slate-300 px-4 py-4">

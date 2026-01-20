@@ -39,7 +39,7 @@ const SchoolDetailsTab = ({ school }) => {
       </div>
       <button
         onClick={() => setIsOpen(true)}
-        className="px-4 py-2 mt-10 text-sm text-white bg-gray-800 rounded-md"
+        className="px-4 py-2 mt-10 text-sm text-white bg-gray-800 rounded-md cursor-pointer"
       >
         Edit Details
       </button>

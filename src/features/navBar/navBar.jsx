@@ -1,7 +1,17 @@
+import { useEffect } from "react";
 import SideNavBar from "./sideNavBar/sideNavBarPage";
 import TopBar from "./topNavBar";
 import { Outlet } from "react-router";
+import { useNavigate } from "react-router";
 const NavBar = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    const isLogin = localStorage.getItem("isLogin") === "true";
+
+    if (!isLogin) {
+      navigate("/");
+    }
+  }, []);
   return (
     <div className="flex fixed inset-0">
       <SideNavBar />

@@ -1,10 +1,15 @@
 const SchoolHeaderUI = ({ setTabs, tabs, school }) => {
+  const firstLetter = school?.school_name?.[0]?.toUpperCase();
   return (
     <div className="w-full bg-white">
       {/* Header */}
       <div className="flex items-center gap-6 px-8 py-6 border-b">
         {/* Avatar */}
-        <div className="w-20 h-20 rounded-full bg-gray-300" />
+        <img
+          src={`https://placehold.co/50x50?text=${firstLetter}`}
+          alt="User"
+          className="w-20 h-20 rounded-full bg-gray-300"
+        />
 
         {/* Info */}
         <div className="flex flex-col gap-1">

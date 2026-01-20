@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router";
 import Login from "../features/auth/login/loginPage.jsx";
 import Dashboard from "../features/dashboard/dashboardPage.js";
-import SideNavBar from "../features/navBar/navBar.jsx";
+import NavBar from "../features/navBar/navBar.jsx";
 import SchoolOnboarding from "../features/schoolOnboarding/schoolOnboardingPage.jsx";
 import School from "../features/school/page/schoolPage.jsx";
 import SchoolEditePage from "../features/school/page/schoolViewPage.jsx";
@@ -11,7 +11,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Login />} />
 
-        <Route element={<SideNavBar />}>
+        <Route element={<NavBar />}>
           <Route path="/dashboard" element={<Dashboard />} />
 
           <Route path="/school">
