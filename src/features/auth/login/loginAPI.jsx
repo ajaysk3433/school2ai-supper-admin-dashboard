@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const SERVER = import.meta.env.VITE_SERVER;
-
 export const loginRequest = async (Credentials) => {
   try {
-    const response = await axios.post(`${SERVER}/auth/login`, Credentials);
+    const response = await axios.post("/api/auth/login", Credentials, {
+      withCredentials: true,
+    });
     return response.data;
   } catch (error) {
     console.error("Error posting data:", error);

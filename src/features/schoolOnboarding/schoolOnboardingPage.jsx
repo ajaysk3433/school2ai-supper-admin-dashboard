@@ -27,6 +27,7 @@ const SchoolOnboarding = () => {
       inputValue.cost = Number(inputValue.cost);
       inputValue.studentCount = Number(inputValue.studentCount);
       inputValue.teacherCount = Number(inputValue.teacherCount);
+      inputValue.website = Boolean(inputValue.website);
 
       const data = await createSchool(inputValue);
       console.log(data);
@@ -160,7 +161,7 @@ const SchoolOnboarding = () => {
             value={inputValue.pincode}
             onChange={setUserInput}
             name="pincode"
-            type="text"
+            type="number"
             placeholder="560001"
             className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm"
           />

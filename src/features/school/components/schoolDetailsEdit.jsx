@@ -70,9 +70,10 @@ const EditFieldModal = ({ isOpen, onClose, id }) => {
           </select>
         );
       case "pincode":
+      case "cost":
         return (
           <input
-            type="text"
+            type="number"
             value={inputValue.value}
             onChange={handleInputChange}
             name="value"
